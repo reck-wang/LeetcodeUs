@@ -7,27 +7,23 @@ func solveSudoku(board [][]byte) {
 func solve(board [][]byte) bool {
 	for i := 0; i < 9; i++ {
 		for j := 0; j < 9; j++ {
-			if board[i][j] != '.' {
-				continue
-			}
-
-			// valid
-			for c := byte('0'); c < '9'; c++ {
-				if valid(board, i, j, c) {
-					board[i][j] = c
-					if solve(board) {
-						return true
-					} else {
-						board[i][j] = '.'
+			if board[i][j] == '.' {
+				// valid
+				for c := byte('1'); c <= '9'; c++ {
+					if valid(board, i, j, c) {
+						board[i][j] = c
+						if solve(board) {
+							return true
+						} else {
+							board[i][j] = '.'
+						}
 					}
 				}
+				return false
 			}
-
-			return false
 		}
 	}
-
-	return false
+	return true
 }
 
 func valid(board [][]byte, row, col int, c byte) bool {
