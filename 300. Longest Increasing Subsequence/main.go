@@ -1,4 +1,4 @@
-package PassAlgorithmInterview
+package main
 
 // Method One: Dynamic Programming
 //func lengthOfLIS(nums []int) int {
