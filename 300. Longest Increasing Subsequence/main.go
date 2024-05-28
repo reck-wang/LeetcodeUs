@@ -1,4 +1,4 @@
-package _00__Longest_Increasing_Subsequence
+package main
 
 // Method One: Dynamic Programming
 //func lengthOfLIS(nums []int) int {
