@@ -1,4 +1,4 @@
-package PassAlgorithmInterview
+package _00__Longest_Increasing_Subsequence
 
 // Method One: Dynamic Programming
 //func lengthOfLIS(nums []int) int {
